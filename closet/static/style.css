@@ -1,0 +1,453 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.navbar {
+    display: flex;
+    width: 100%;
+    position: fixed; /* Make sure navbar is fixed to the top */
+    top: 0;
+    left: 0;
+    background-color: #0093E9;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(26, 21, 21);
+    padding: 10px;
+    flex-wrap: wrap;
+    z-index: 2; /* Allows the navbar to wrap content to a new line on smaller screens */
+}
+.navbar h1{
+    font-family: 'Dancing Script', cursive;
+
+    color: white;
+}
+#btnnav{
+    display: none;
+    cursor: pointer;
+    color: black;
+}
+
+.navlinks ul, li {
+    list-style-type: none;
+    display: flex;
+    padding: 0px 10px;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+    margin-right: 8px;
+    
+
+}
+
+.navlinks li {
+    text-align: center;
+}
+.menu-container button{
+    padding: 5px 5px;
+    transition: 0.2s;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    
+    
+
+}
+.menu-container button:hover{
+    background-color: #4890c0;;
+    color: white;
+
+}
+
+.navlinks a{
+    text-decoration: none;
+}
+.navlinks li:hover {
+    transform: scale(1.1);
+    transition: 0.2s;
+    color:black;
+    background-color: #4bc0dd;
+    text-align: center;
+    border-radius: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+nav  li a.active {
+    font-weight: bold; /* Example style for active link */
+    background-color: #c4cacc; /* Example color for active link */
+  }
+  
+
+.fas.fa-comment {
+    position: fixed;
+    bottom: 20px;
+    padding: 10px;
+    background-color: rgb(247, 233, 233);
+    right: 0;
+    margin: 20px;
+    z-index: 2;
+    color: rgb(122, 215, 122);
+    cursor: pointer;
+}
+
+.flex-item {
+    width: 175px;
+    height: 150px;
+    background-color: rgb(143, 136, 136);
+    padding: 30px;
+    margin: 45px;
+    flex-wrap: wrap;
+}
+
+
+.rest {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    text-align: center;
+}
+
+.sort-menu {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    gap: 20px;
+    padding: 5px;
+}
+.flex-item-cover {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+   
+}
+
+.checkbox-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkbox-form label {
+    margin-bottom: 5px; /* Add some spacing between checkboxes */
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+.navlinks ul li.active a {
+    color: #007bff; /* Change color for active link */
+    font-weight: bold; /* Optionally, change font weight for active link */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.hamburger-menu button {
+    background: none;
+    color: white;
+    border: none;
+    font-size: 24px;
+}
+.menu-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    overflow: hidden; /* Prevents overflow outside the container */
+}
+
+.menu-container > button,
+.menu-container .dropdown button {
+    flex: 1 1 auto; /* Allows buttons to grow and shrink */
+    min-width: 50px;
+    max-width: 105px; /* Sets a minimum width for buttons */
+    padding: 5px 10px; /* Adjust padding for better fitting */
+    font-size: 12px; /* Adjust font size */
+    text-overflow: ellipsis; /* Ensures text doesn't overflow */
+    white-space: nowrap; /* Keeps text in single line */
+    overflow: hidden; /* Hide overflowed text */
+    border: 1px solid transparent; /* Optional: for style */
+    background-color: #f0f0f0; /* Light gray background */
+    color: #333; /* Text color */
+}
+
+/* Responsive adjustments for even smaller screens */
+@media (max-width: 480px) {
+    .menu-container > button,
+    .menu-container .dropdown button {
+        padding: 5px 8px; /* Smaller padding */
+        font-size: 10px; /* Smaller font size */
+    }
+}
+
+.cat {
+    padding: 20px;
+    border: 1px solid #c4cacc;
+    margin: 30px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap */
+    justify-content: center; /* Center items horizontally */
+    align-items: center;
+    font-family: Arial, sans-serif;
+    color: #8ddbf7;
+    margin-top: 30px;
+}
+
+.icon {
+    width: 80px; /* Adjusted width */
+    height: 80px; /* Adjusted height */
+    background-color: #333;
+    border-radius: 50%;
+    padding: 10px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.icon h5 {
+    color: #eafbff;
+    text-align: center;
+    margin: 0; /* Remove default margin */
+    font-size: 14px; /* Adjust font size */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .icon {
+        width: 60px; /* Adjust width for smaller screens */
+        height: 60px; /* Adjust height for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .icon {
+        width: 50px; /* Further adjust width for even smaller screens */
+        height: 50px; /* Further adjust height for even smaller screens */
+    }
+}
+
+
+@media (max-width: 500px) {
+   
+    .flex-item{
+        width: 70px;
+        height: 55px;
+        justify-content: space-around;
+        
+    }
+
+    .navlinks {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+        text-align: center;
+        color: rgb(50, 132, 160);
+    }
+
+    .navlinks li {
+        padding: 15px;
+        color: rgb(50, 132, 160);
+    }
+
+    .hamburger-menu button {
+        display: block;
+    }  
+    #btnnav{
+        display: flex;
+    }
+}
+
+.links {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    z-index: 2;
+    height: 100vh;
+    width: 250px;
+    background-color: white;
+}
+
+.link {
+    display: flex;
+    flex-direction: column;
+    padding: 12px 15px;
+    font-size: 14px;
+    text-decoration: none;
+    color: black;
+}
+
+.link:hover {
+    background-color:rgb(179, 200, 211);
+    color:rgb(225, 238, 242); ;
+}
+
+.open .links {
+    transform: translateX(0px);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(2px);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+
+}
+
+.links {
+    transform: translateX(-250px);
+    transition: 0.5s;
+}
+
+.open .nav-overlay {
+    visibility: visible;
+    opacity: 1;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    border: none;
+   
+   /* This centers vertically */
+}
+.search-container {
+    display: flex;
+    align-items: center;
+    padding-top: 60px;
+    padding-bottom: 10px;
+  /* Adjust the width as needed */
+}
+
+.search-container input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    background-color: #eafbff;
+    border: none;
+
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+
+.search-container button[type="submit"] {
+    padding: 10px 15px;
+    background-color: rgb(192, 235, 251);
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+/* Optionally style the search icon */
+.search-container button[type="submit"] i {
+    font-size: 20px;
+}
+.user-profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.username {
+    margin-bottom: 2px; /* Adjust spacing between username and profile icon */
+}
+
+.profile-icon {
+    width: 20px; /* Adjust size of the profile icon */
+    height: 20px;
+    background-color: #ccc; /* Set background color */
+    border-radius: 50%; /* Create a round shape */
+}
+.category {
+    display: flex;
+    justify-content: center; /* Horizontally center the contents */
+    width: 100%; /* Ensure the container takes full width */
+}
+
+.products{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 10px;
+    height: 400px;
+    width: 300px;
+    background-color: rgba(206, 221, 225, 0.5); /* Semi-transparent background */
+    margin: 15px;
+    text-align: center;
+    padding-top: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Light white border for subtle edge */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    backdrop-filter: blur(10px); /* Blur the background behind the element */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    border-radius: 10px; /* Optional: rounded corners */
+}
+.productimage{
+    width: 230px; 
+    height: 180px;
+    overflow: hidden;
+
+}
+
+
+.productimage {
+    margin-bottom: 15px; /* Add space below the image */
+}
+
+.product h2 {
+    margin: 10px 0; /* Add space above and below the product name */
+}
+
+.product p {
+    margin: 10px 0; /* Add space above and below each paragraph */
+}
+
+.product button {
+    margin-top: 15px; /* Add space above the button */
+    padding: 10px 20px; /* Optional: Add padding to the button */
+    background-color: #f0c14b; /* Optional: Set background color for the button */
+    border: 1px solid #a88734; /* Optional: Set border color for the button */
+    border-radius: 4px; /* Optional: Add rounded corners to the button */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.product button:hover {
+    background-color: #e2b607; /* Optional: Change button background color on hover */
+}
